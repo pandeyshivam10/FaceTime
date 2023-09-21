@@ -1,7 +1,10 @@
 const { Server } = require("socket.io");
 
-const io = new Server(8000, {
-  cors: true,
+const io = new Server({
+  cors: {
+    origin: "https://face-time.vercel.app",
+    methods: ["GET", "POST"],
+  },
 });
 
 const emailToSocketIdMap = new Map();
