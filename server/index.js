@@ -19,9 +19,6 @@ const io = new Server(server, {
 app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
-
-
-
 const emailToSocketIdMap = new Map();
 const socketidToEmailMap = new Map();
 
